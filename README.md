@@ -14,7 +14,7 @@ The architecture simulates an external threat actor attempting to enumerate and 
 
 ## Network Architecture & Topology
 
-text
+```text
 +-------------------------+          +-----------------------------------------+          +-------------------------+
 |      Attacker Host      |          |         Gateway / Defense Node          |          |       Victim Host       |
 |      (Kali Linux)       |          |            (Ubuntu Server)              |          |    (Metasploitable2)    |
@@ -26,7 +26,7 @@ text
                                      |  • iptables Perimeter Packet Filtering  |
                                      |  • Snort NIDS / Inline NIPS (NFQUEUE)   |
                                      +-----------------------------------------+
-
+```
 ### Node Specifications
 | Node Role | Operating System | Interface(s) | IP Address / Subnet | Security Function |
 | :--- | :--- | :--- | :--- | :--- |
@@ -95,13 +95,13 @@ sudo snort -c /etc/snort/snort.conf -Q --daq nfq --daq-var queue=0 -A console
 ---
 
 ## Repository Structure
-text
+```text
 ├── docs/
 │   └── 2410207_HaTheDuy_ReportLab1-4.pdf   # Full technical report with terminal outputs & packet captures
 ├── configs/
 │   ├── iptables-rules.sh                  # Perimeter filtering & NFQUEUE redirection rules
 │   └── local.rules                        # Custom Snort NIDS/NIPS detection & inline drop rules
 └── README.md
-
+```
 ---
 *Author:* Ha The Duy — B.Sc. Student in Cybersecurity, University of Science and Technology of Hanoi (USTH)
