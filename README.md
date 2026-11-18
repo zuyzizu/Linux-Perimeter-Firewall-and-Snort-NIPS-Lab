@@ -22,7 +22,7 @@ The architecture simulates an external threat actor attempting to enumerate and 
 |  eth0: 10.10.1.128/24   |--------->|  ens38 (WAN): 10.10.1.1/24              |          |                         |
 |        10.10.1.2/24     |   WAN    |  ens37 (LAN): 172.16.1.1/24             |--------->|  eth0: 172.16.1.2/24    |
 |                         |  Subnet  |                                         |   LAN    |                         |
-+-------------------------+          |  • Kernel IPv4 Packet Forwarding         |  Subnet  +-------------------------+
++-------------------------+          |  • Kernel IPv4 Packet Forwarding        |  Subnet  +-------------------------+
                                      |  • iptables Perimeter Packet Filtering  |
                                      |  • Snort NIDS / Inline NIPS (NFQUEUE)   |
                                      +-----------------------------------------+
