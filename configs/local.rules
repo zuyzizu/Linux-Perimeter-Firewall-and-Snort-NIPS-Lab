@@ -1,0 +1,7 @@
+# Custom Snort NIDS/NIPS Signatures (/etc/snort/rules/local.rules)
+
+# Passive NIDS Alert Rule (rev 1)
+# alert tcp 10.10.1.2 any -> 172.16.1.2 23 (msg:"TELNET Connection Attempt"; sid:1000001; rev:1;)
+
+# Active Inline NIPS Drop Rule (rev 2 - used with DAQ NFQUEUE)
+drop tcp 10.10.1.2 any -> 172.16.1.2 23 (msg:"[NIPS] Active Telnet Attack Blocked"; sid:1000001; rev:2;)
